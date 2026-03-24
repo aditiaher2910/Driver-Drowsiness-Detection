@@ -1,138 +1,97 @@
-# 🚗 Driver Drowsiness Detection Alert System
 
-## 📌 Overview
+# Driver Drowsiness Detection Alert System Using Python
 
-The Driver Drowsiness Detection Alert System is a real-time computer vision-based application designed to detect driver fatigue and prevent road accidents. The system monitors the driver's eye movements and triggers an alert when signs of drowsiness are detected.
+A tool designed to detect driver drowsiness through face recognition and alert the driver with voice commands. This project leverages Python and machine learning concepts to ensure driver safety by monitoring yawning and eye focus.
 
----
+## Overview
 
-## 🎯 Features
+This project uses several powerful libraries and frameworks:
+- **dlib**: A machine learning library for face recognition and landmark prediction.
+- **imutils**: A collection of convenience functions to work with images and video frames.
+- **scipy**: Used to calculate yawning and eye focus percentages.
+- **OpenCV**: A comprehensive library for image and video processing.
+- **argparse**: Provides a command-line interface for running the project with specific parameters.
 
-* 👁️ Real-time eye tracking using webcam
-* 😴 Detects drowsiness based on eye closure (EAR - Eye Aspect Ratio)
-* 🔔 Audio alert system when drowsiness is detected
-* ⚡ Fast and efficient processing using OpenCV
-* 🧠 Machine Learning / Deep Learning integration (optional)
+### Hardware Requirements
 
----
+- A camera with at least 2.0 MP resolution.
+- An audio speaker for alerts.
+- A Raspberry Pi or a computer system to connect and process the frames using Python.
 
-## 🛠️ Tech Stack
+### Project Functionality
 
-* **Programming Language:** Python
-* **Libraries & Tools:** OpenCV, NumPy, Dlib / Mediapipe
-* **Concepts Used:** Computer Vision, Facial Landmark Detection
+The camera captures 10 frames per second. Each frame is checked against the defined thresholds for yawning and eye focus. Alerts are triggered via the speaker:
+- **Eye Alert**: "Open your eyes, sir."
+- **Yawn Alert**: "Take some fresh air, sir."
 
----
+Press `q` to quit the application.
 
-## ⚙️ How It Works
+### Challenges
 
-1. Captures live video using webcam
-2. Detects face and eyes using facial landmarks
-3. Calculates Eye Aspect Ratio (EAR)
-4. If EAR falls below a threshold for a certain time, system detects drowsiness
-5. Triggers an alert sound to wake the driver
+The most challenging part was installing the `dlib` library, as many Python versions do not support it directly. After extensive research, the compatible versions were identified as Python 3.8.5 and `dlib` 19.19.0. Although an XML file can be used for face detection, it is less accurate than `dlib`.
 
----
+## Installation Guide
 
-## 📁 Project Structure
+### Prerequisites
 
-```
-driver-drowsiness-detection/
-│
-├── dataset/
-├── models/
-├── app.py
-├── requirements.txt
-├── alarm.wav
-└── README.md
-```
+- **Python 3.8.5**: Ensure that Python 3.8.5 is installed on your system. You can download it from the [official Python website](https://www.python.org/downloads/release/python-385/).
 
----
+- **Microsoft Visual Studio C++ Build Tools**: Required for compiling some of the libraries.
+    1. Download the [Microsoft Visual Studio C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
+    2. During installation, ensure you select the **C++ build tools** and the **Windows 10 SDK**.
+    3. Refer this for a complete tutorial for installation https://youtu.be/_keTL9ymGjw?si=7OAD3mpyqf1sf-FP
+  
+### Setup Instructions
 
-## ▶️ Installation & Usage
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/K-GOKULAPPADURAI/Driver-Drowsiness-Detection-Alert-System-using-Python-.git
+   cd Driver-Drowsiness-Detection-Alert-System-using-Python
+   ```
 
-### 1. Clone the repository
+2. **Create a Virtual Environment**:
+   ```bash
+   python -m venv venv
+   ```
 
-```
-git clone https://github.com/your-username/driver-drowsiness-detection.git
-```
+3. **Activate the Virtual Environment**:
+   - On **Windows**:
+     ```bash
+     venv\Scripts\activate
+     ```
+   - On **macOS/Linux**:
+     ```bash
+     source venv/bin/activate
+     ```
 
-### 2. Navigate to the folder
+4. **Install Required Libraries**:
+   - **Install CMake**:
+     ```bash
+     pip install cmake
+     ```
+   - **Install Other Dependencies**:
+     ```bash
+     pip install -r requirements.txt
+     ```
 
-```
-cd driver-drowsiness-detection
-```
+5. **Run the Application**:
+   ```bash
+   python main.py
+   ```
 
-### 3. Install dependencies
+### Additional Notes
 
-```
-pip install -r requirements.txt
-```
-
-### 4. Run the project
-
-```
-python app.py
-```
-
----
-
-## 📸 Applications
-
-* 🚘 Road safety systems
-* 🚛 Commercial vehicle monitoring
-* 🏢 Smart transportation systems
-
----
-
-## ✅ Advantages
-
-* Helps reduce accidents caused by fatigue
-* Low-cost and real-time solution
-* Easy to implement
-
----
-## 📥 Download Required Model File
-
-Due to GitHub file size limitations, the model file is hosted externally.
-
-👉 Download here:https://drive.google.com/file/d/1e3xtu7mjo1NLQxa49siTcWBqXkE-nS97/view?usp=sharing
-
-After downloading, place the file in the project folder:
-
-```
-shape_predictor_68_face_landmarks.dat
-```
-
-## ⚠️ Limitations
-
-* Performance depends on lighting conditions
-* Requires camera access
-* May vary with facial features or obstructions
+- Ensure your Python version is 3.8.5 to avoid compatibility issues, especially with `dlib`.
+- If `dlib` installation fails, verify that you have correctly installed the Microsoft Visual Studio C++ Build Tools with the necessary components.
+- You can modify thresholds and other settings directly within the `main.py` file as needed.
 
 ---
 
-## 🔮 Future Scope
+Thank you for using this tool. Feel free to reach out if you have any questions or need further assistance.
 
-* Mobile app integration
-* Integration with IoT and smart vehicles
-* Improved accuracy using deep learning models
+**Contact Information:**
 
----
+- **Phone**: 9025421765
+- **Email**: k.gokulappaduraikjgv@gmail.com
 
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to fork this repo and submit a pull request.
-
----
-
-## 📜 License
-
-This project is open-source and available under the MIT License.
-
----
-
-## 🙌 Acknowledgements
-
-* OpenCV community
-* Dlib / Mediapipe contributors
+*Developed by K. Gokulappadurai, B.E (CSE) in progress...*
