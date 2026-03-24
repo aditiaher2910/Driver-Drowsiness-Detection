@@ -78,6 +78,7 @@ The most challenging part was installing the `dlib` library, as many Python vers
    ```bash
    python main.py
    ```
+   Download virtual envirronment files:https://drive.google.com/drive/folders/1eDvFbkbMPGAXGzFYmdyi8OtUzanjymQP?usp=sharing
 
 ### Additional Notes
 
@@ -87,11 +88,5 @@ The most challenging part was installing the `dlib` library, as many Python vers
 
 ---
 
-Thank you for using this tool. Feel free to reach out if you have any questions or need further assistance.
 
-**Contact Information:**
 
-- **Phone**: 9025421765
-- **Email**: k.gokulappaduraikjgv@gmail.com
-
-*Developed by K. Gokulappadurai, B.E (CSE) in progress...*
