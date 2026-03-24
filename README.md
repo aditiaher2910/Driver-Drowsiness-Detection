@@ -92,6 +92,17 @@ python app.py
 * Easy to implement
 
 ---
+## 📥 Download Required Model File
+
+Due to GitHub file size limitations, the model file is hosted externally.
+
+👉 Download here:https://drive.google.com/file/d/1e3xtu7mjo1NLQxa49siTcWBqXkE-nS97/view?usp=sharing
+
+After downloading, place the file in the project folder:
+
+```
+shape_predictor_68_face_landmarks.dat
+```
 
 ## ⚠️ Limitations
 
